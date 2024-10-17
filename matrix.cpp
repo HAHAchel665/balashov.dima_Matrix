@@ -1,7 +1,7 @@
 #include <iostream>
 #include "matrix.hpp"
 
-void inputMatrix(const int * const * t, size_t m, size_t n)
+void inputMatrix(int * const * t, size_t m, size_t n)
 {
   for(size_t i =0; i < m; i++)
   {
@@ -43,7 +43,7 @@ int ** createMatrix(size_t m, size_t n)
       t[created] = new int[n];
     }
   } catch (const std::bad_alloc & e) {
-    deleteArray(t, created);
+    deleteMatrix(t, created);
     throw;
   }
   return t;
