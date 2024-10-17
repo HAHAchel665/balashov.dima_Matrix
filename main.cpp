@@ -1,16 +1,20 @@
-#include<iostream>
+#include <iostream>
 #include "matrix.hpp"
-
-int ** CreateMatrix(size_t m, size_t n);
-
-void DeleteArray(int** t, size_t m, size_t n);
 
 int main()
 {
-	size_t M=0, N=0;
-	std::cin >>M>>N;
-	int **t = CreateMatrix (M,N);
-	std::cout << M << " " << N << "/n";
-	
+  size_t m = 0, n = 0;
+  std::cin >> m >> n;
+  int **matrix = nullptr;
+try {
+    matrix = createMatrix(m, n);
+  } catch (const std::bad_alloc & e) {
+    std::cerr << "Out of memory\n";
+    return 1;
+  }
+  inputMatrix(matrix,m,n);
+  outputMatrix(matrix,m,n);
+  deleteMatrix(matrix,m);
 
+  return 0;
 }
