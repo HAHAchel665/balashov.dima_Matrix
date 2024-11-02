@@ -3,9 +3,30 @@
 
 #include <cstddef>
 
-void deleteMatrix(int** t, size_t m);
-void outputMatrix(const int* const * t, size_t m, size_t n);
-void inputMatrix(int* const * t, size_t m, size_t n);
-int** createMatrix(size_t m, size_t n);
+class Matrix
+{
+private:
+  int** matrix = 0;
+  size_t column = 0;
+  size_t row = 0;
+
+  void deleteMatrix() const;
+  void deleteMatrix(int** matrix, int column);
+  int** createMatrix();
+  int** createMatrix(int **t,int column, int row);
+
+public:
+
+  Matrix(int column, int row);
+  Matrix(Matrix &other);
+  ~Matrix();
+
+  int getColumn() const;
+  int getRow() const;
+
+  void changeSizeMatrix(size_t column, size_t n);
+  void outputMatrix() const;
+  void inputMatrix();
+};
 
 #endif
