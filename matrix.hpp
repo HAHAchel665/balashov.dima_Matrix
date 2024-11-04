@@ -26,7 +26,7 @@ public:
 
   void changeSizeMatrix(size_t column, size_t n);
   void outputMatrix() const;
-  void inputMatrix();
+  void inputMatrix() const;
 };
 
 #endif
