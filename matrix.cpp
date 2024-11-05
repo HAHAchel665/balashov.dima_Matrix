@@ -104,6 +104,17 @@ void Matrix::deleteMatrix() const
   delete[] matrix;
 }
 
+void Matrix::fillWithElement(int element)
+{
+  for (size_t i = 0; i < column; i++)
+  {
+    for (size_t j = 0; j < row; j++)
+    {
+      matrix[i][j] = element;
+    }
+  }
+}
+
 void Matrix::deleteMatrix(int**matrix, int column)
 {
   for (size_t i = 0; i < column; ++i)

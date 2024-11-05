@@ -24,6 +24,7 @@ public:
   int getColumn() const;
   int getRow() const;
 
+  void fillWithElement(int element);
   void changeSizeMatrix(size_t column, size_t n);
   void outputMatrix() const;
   void inputMatrix() const;

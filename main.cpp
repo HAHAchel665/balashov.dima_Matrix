@@ -59,5 +59,15 @@ int main()
   std::cout << "output of the second matrix\n";
   matrix2.outputMatrix();
 
+  std::cout << "fill the first array with an element\n";
+  int element = 0;
+  std::cin >> element;
+  matrix1.fillWithElement(element);
+
+  std::cout << "output of the first matrix\n";
+  matrix1.outputMatrix();
+
+  std::cout << "output of the second matrix\n";
+  matrix2.outputMatrix();
   return 0;
 }
