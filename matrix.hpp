@@ -6,7 +6,7 @@
 class Matrix
 {
 private:
-  int** matrix = 0;
+  int** matrix = nullptr;
   size_t column = 0;
   size_t row = 0;
 
